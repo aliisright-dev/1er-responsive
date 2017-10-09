@@ -1,61 +1,100 @@
-/*Layout*/
-
-html {
-    display: flex;
-    flex-direction: column;
-}
+@import url('https://fonts.googleapis.com/css?family=Lobster|Quicksand');
 
 body {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    font-size: 1em;
-    height: 100vh; 
-    max-height: 100vh;
-}
-
-header {
-    flex: 1 1 auto;
-}
-
-section {
-    flex: 1 1 auto;
-}
-
-footer {
-    align-self: flex-end;
-    background-color: black;
-    width: 100wh;
-}
-
-/*Styling*/
-header {
+    font: 1em 'Quicksand', sans-serif;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: black;
-    flex: none;
-    
 }
 
-header h1 {
-    color: white;
-    text-align: center;
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
 }
 
 nav {
-    align-items: center;
-    color: white;
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
 }
 
 nav li {
-    padding: 0,01em;
-    list-style: none;
-    text-align: center;
+    display: inline;
+    padding: 1em;
 }
 
-body {
-    background-color: beige;
+section {
+    display: flex;
+    height: 600px;
+    background-size: cover;
+    background-image: url("http://www.amylee.fr/wp-content/uploads/2016/04/LO1.jpg");
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
 }
-.social p {
-    color: white;
+
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+}
+
+.textonimage {
+    position: absolute;
+    width: 15em;
+    text-align: justify;
+    border: 2px solid black;
+    padding: 0 1em;
+    background-color: rgba(217,217,217,0.4)
+    
+    
+}
+
+.textonimage h3 {
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.social img {
+    width: 2em;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact {
+    padding: 1em;
+    font-size: 0.8em;
+    line-height: 0.5;
+}
+
+
+/*responsive*/
+
+@media (max-width: 640px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav {
+        text-align: center;
+    }
+    
+    section {
+        background-position: center;
+    }
+    
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact {
+        text-align: center;
+    }
+    
 }
